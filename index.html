@@ -5,7 +5,7 @@
 
     <meta charset="UTF-8">
 
-    <title>Meu Mundo do Vôlei</title>
+    <title>Vôlei</title>
 
     <style>
 
@@ -28,12 +28,8 @@
         }
 
         .inicio {
-            padding: 30px;
             text-align: center;
-        }
-
-        .inicio h2 {
-            color: #315b7d;
+            padding: 30px;
         }
 
         .conteudo {
@@ -76,6 +72,7 @@
             padding: 10px 15px;
             border-radius: 5px;
             cursor: pointer;
+            margin: 5px;
         }
 
         button:hover {
@@ -88,12 +85,9 @@
             margin: 20px;
         }
 
-        footer {
-            background-color: #315b7d;
-            color: white;
+        .curtidas {
             text-align: center;
-            padding: 15px;
-            margin-top: 30px;
+            margin: 20px;
         }
 
     </style>
@@ -106,9 +100,9 @@
 
     <header>
 
-        <h1>🏐 Meu Mundo do Vôlei</h1>
+        <h1>🏐 Vôlei</h1>
 
-        <p>Um pouco sobre um dos meus esportes favoritos</p>
+        <p>Conheça um pouco mais sobre esse esporte</p>
 
     </header>
 
@@ -117,13 +111,14 @@
 
         <h2>Você gosta de vôlei?</h2>
 
-        <p>
-            O vôlei é um esporte que precisa de
-            trabalho em equipe, atenção e comunicação.
-        </p>
+        <button onclick="gostar()">
+            ❤️ Eu gosto!
+        </button>
 
-        <button onclick="responder()">
-            Eu gosto de vôlei!
+        <p id="likes">0 pessoas gostaram</p>
+
+        <button onclick="curiosidade()">
+            💡 Ver curiosidade
         </button>
 
     </div>
@@ -137,10 +132,9 @@
             <h2>🏐 Sobre o vôlei</h2>
 
             <p>
-                O voleibol é jogado por duas equipes
-                que ficam em lados diferentes de uma rede.
-                O objetivo é fazer a bola tocar no chão
-                do lado adversário.
+                O voleibol é um esporte jogado por duas
+                equipes. O objetivo é fazer a bola passar
+                pela rede e tocar no chão do lado adversário.
             </p>
 
         </div>
@@ -148,7 +142,7 @@
 
         <div class="parte">
 
-            <h2>📍 Algumas posições</h2>
+            <h2>📍 Posições</h2>
 
             <div class="posicoes">
 
@@ -158,8 +152,12 @@
                     <h3>Levantador</h3>
 
                     <p>
-                        Ajuda a organizar as jogadas.
+                        Organiza as jogadas da equipe.
                     </p>
+
+                    <button onclick="mostrar('O levantador prepara a bola para os ataques.')">
+                        Saber mais
+                    </button>
 
                 </div>
 
@@ -169,8 +167,12 @@
                     <h3>Atacante</h3>
 
                     <p>
-                        É responsável por muitos ataques.
+                        Realiza os ataques.
                     </p>
+
+                    <button onclick="mostrar('O atacante tenta marcar pontos através dos ataques.')">
+                        Saber mais
+                    </button>
 
                 </div>
 
@@ -180,8 +182,12 @@
                     <h3>Líbero</h3>
 
                     <p>
-                        Atua principalmente na defesa.
+                        Ajuda na defesa.
                     </p>
+
+                    <button onclick="mostrar('O líbero é especialista em recepção e defesa.')">
+                        Saber mais
+                    </button>
 
                 </div>
 
@@ -191,8 +197,12 @@
                     <h3>Central</h3>
 
                     <p>
-                        Ajuda principalmente no bloqueio.
+                        Ajuda no bloqueio.
                     </p>
+
+                    <button onclick="mostrar('O central participa bastante dos bloqueios e ataques rápidos.')">
+                        Saber mais
+                    </button>
 
                 </div>
 
@@ -204,13 +214,16 @@
 
         <div class="parte">
 
-            <h2>⭐ Por que eu gosto?</h2>
+            <h2>⭐ Por que o vôlei é legal?</h2>
 
             <p>
-                Eu gosto do vôlei porque é um esporte
-                divertido e que depende muito da união
-                entre os jogadores.
+                É um esporte que precisa de trabalho em
+                equipe, comunicação e concentração.
             </p>
+
+            <button onclick="mudarCor()">
+                🎨 Mudar a cor
+            </button>
 
         </div>
 
@@ -220,16 +233,46 @@
 
     <p id="mensagem"></p>
 
+
     <script>
 
-        function responder() {
+        let numero = 0;
 
-            document.getElementById("mensagem").innerHTML =
-                "🏐 Que legal! Vamos jogar!";
+
+        function gostar() {
+
+            numero++;
+
+            document.getElementById("likes").innerHTML =
+                numero + " pessoas gostaram ❤️";
 
         }
 
-    </script>
+
+        function curiosidade() {
+
+            let curiosidades = [
+                "🏐 O vôlei foi criado em 1895.",
+                "🏐 A rede divide a quadra em dois lados.",
+                "🏐 Cada equipe pode dar até três toques antes de passar a bola."
+            ];
+
+            let sorteio =
+                Math.floor(Math.random() * curiosidades.length);
+
+            document.getElementById("mensagem").innerHTML =
+                curiosidades[sorteio];
+
+        }
+
+
+        function mostrar(texto) {
+
+            document.getElementById("mensagem").innerHTML =
+                texto;
+
+        }
+
 
 
 </body>
