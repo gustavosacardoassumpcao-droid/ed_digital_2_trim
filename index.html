@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Meu Mundo do Vôlei</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            font-family: Arial;
+            background-color: #eef3f8;
+            color: #26384a;
+        }
+
+        header {
+            background-color: #315b7d;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .inicio {
+            padding: 30px;
+            text-align: center;
+        }
+
+        .inicio h2 {
+            color: #315b7d;
+        }
+
+        .conteudo {
+            width: 80%;
+            margin: auto;
+        }
+
+        .parte {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        .parte h2 {
+            color: #315b7d;
+        }
+
+        .posicoes {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .posicao {
+            background-color: #dce8f1;
+            padding: 15px;
+            width: 150px;
+            border-radius: 8px;
+        }
+
+        .posicao h3 {
+            margin-top: 0;
+        }
+
+        button {
+            background-color: #315b7d;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #244761;
+        }
+
+        #mensagem {
+            text-align: center;
+            font-weight: bold;
+            margin: 20px;
+        }
+
+        footer {
+            background-color: #315b7d;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <header>
+
+        <h1>🏐 Meu Mundo do Vôlei</h1>
+
+        <p>Um pouco sobre um dos meus esportes favoritos</p>
+
+    </header>
+
+
+    <div class="inicio">
+
+        <h2>Você gosta de vôlei?</h2>
+
+        <p>
+            O vôlei é um esporte que precisa de
+            trabalho em equipe, atenção e comunicação.
+        </p>
+
+        <button onclick="responder()">
+            Eu gosto de vôlei!
+        </button>
+
+    </div>
+
+
+    <div class="conteudo">
+
+
+        <div class="parte">
+
+            <h2>🏐 Sobre o vôlei</h2>
+
+            <p>
+                O voleibol é jogado por duas equipes
+                que ficam em lados diferentes de uma rede.
+                O objetivo é fazer a bola tocar no chão
+                do lado adversário.
+            </p>
+
+        </div>
+
+
+        <div class="parte">
+
+            <h2>📍 Algumas posições</h2>
+
+            <div class="posicoes">
+
+
+                <div class="posicao">
+
+                    <h3>Levantador</h3>
+
+                    <p>
+                        Ajuda a organizar as jogadas.
+                    </p>
+
+                </div>
+
+
+                <div class="posicao">
+
+                    <h3>Atacante</h3>
+
+                    <p>
+                        É responsável por muitos ataques.
+                    </p>
+
+                </div>
+
+
+                <div class="posicao">
+
+                    <h3>Líbero</h3>
+
+                    <p>
+                        Atua principalmente na defesa.
+                    </p>
+
+                </div>
+
+
+                <div class="posicao">
+
+                    <h3>Central</h3>
+
+                    <p>
+                        Ajuda principalmente no bloqueio.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <div class="parte">
+
+            <h2>⭐ Por que eu gosto?</h2>
+
+            <p>
+                Eu gosto do vôlei porque é um esporte
+                divertido e que depende muito da união
+                entre os jogadores.
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <p id="mensagem"></p>
+
+
+    <footer>
+
+        <p>Meu Mundo do Vôlei 🏐</p>
+
+    </footer>
+
+
+    <script>
+
+        function responder() {
+
+            document.getElementById("mensagem").innerHTML =
+                "🏐 Que legal! Vamos jogar!";
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
