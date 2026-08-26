@@ -65,6 +65,24 @@
             margin-top: 0;
         }
 
+        .fundamentos {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .fundamento {
+            background-color: #dce8f1;
+            padding: 15px;
+            width: 150px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .fundamento h3 {
+            margin-top: 0;
+        }
+
         button {
             background-color: #315b7d;
             color: white;
@@ -102,23 +120,6 @@
     </header>
 
 
-    <div class="inicio">
-
-        <h2>Você gosta de vôlei?</h2>
-
-        <button onclick="gostar()">
-            ❤️ Eu gosto!
-        </button>
-
-        <p id="likes">0 pessoas gostaram</p>
-
-        <button onclick="curiosidade()">
-            💡 Ver curiosidade
-        </button>
-
-    </div>
-
-
     <div class="conteudo">
 
 
@@ -137,7 +138,7 @@
 
         <div class="parte">
 
-            <h2>📍 Posições</h2>
+            <h2>📍 Posições dos jogadores</h2>
 
             <div class="posicoes">
 
@@ -147,12 +148,8 @@
                     <h3>Levantador</h3>
 
                     <p>
-                        Organiza as jogadas da equipe.
+                        Organiza as jogadas da equipe e prepara a bola para os ataques.
                     </p>
-
-                    <button onclick="mostrar('O levantador prepara a bola para os ataques.')">
-                        Saber mais
-                    </button>
 
                 </div>
 
@@ -162,12 +159,8 @@
                     <h3>Atacante</h3>
 
                     <p>
-                        Realiza os ataques.
+                        Realiza os ataques para tentar marcar pontos.
                     </p>
-
-                    <button onclick="mostrar('O atacante tenta marcar pontos através dos ataques.')">
-                        Saber mais
-                    </button>
 
                 </div>
 
@@ -177,12 +170,8 @@
                     <h3>Líbero</h3>
 
                     <p>
-                        Ajuda na defesa.
+                        Especialista em recepção e defesa.
                     </p>
-
-                    <button onclick="mostrar('O líbero é especialista em recepção e defesa.')">
-                        Saber mais
-                    </button>
 
                 </div>
 
@@ -192,15 +181,72 @@
                     <h3>Central</h3>
 
                     <p>
-                        Ajuda no bloqueio.
+                        Participa de bloqueios e ataques rápidos pelo meio.
                     </p>
-
-                    <button onclick="mostrar('O central participa bastante dos bloqueios e ataques rápidos.')">
-                        Saber mais
-                    </button>
 
                 </div>
 
+
+            </div>
+
+        </div>
+
+
+        <div class="parte">
+
+            <h2>⭐ Principais fundamentos</h2>
+
+            <div class="fundamentos">
+
+                <div class="fundamento">
+
+                    <h3>Manchete</h3>
+
+                    <p>
+                        Usada para receber saques e defender ataques baixos.
+                    </p>
+
+                </div>
+
+                <div class="fundamento">
+
+                    <h3>Toque</h3>
+
+                    <p>
+                        Usado para controlar a bola e realizar levantamentos.
+                    </p>
+
+                </div>
+
+                <div class="fundamento">
+
+                    <h3>Saque</h3>
+
+                    <p>
+                        Coloca a bola em jogo para iniciar o ponto.
+                    </p>
+
+                </div>
+
+                <div class="fundamento">
+
+                    <h3>Bloqueio</h3>
+
+                    <p>
+                        Intercepta o ataque adversário junto à rede.
+                    </p>
+
+                </div>
+
+                <div class="fundamento">
+
+                    <h3>Ataque</h3>
+
+                    <p>
+                        Golpeia a bola com força para tentar pontuar.
+                    </p>
+
+                </div>
 
             </div>
 
@@ -253,14 +299,6 @@
 
             document.getElementById("mensagem").innerHTML =
                 curiosidades[sorteio];
-
-        }
-
-
-        function mostrar(texto) {
-
-            document.getElementById("mensagem").innerHTML =
-                texto;
 
         }
 
